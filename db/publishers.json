@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "66b04b3ea29ec8305b04f4ff"
+  },
+  "name": " Disney Princess"
+},
+{
+  "_id": {
+    "$oid": "66b04b3ea29ec8305b04f500"
+  },
+  "name": " Hot Wheels Store"
+},
+{
+  "_id": {
+    "$oid": "66b04b3ea29ec8305b04f501"
+  },
+  "name": "LEGO Store"
+},
+{
+  "_id": {
+    "$oid": "66b04b3ea29ec8305b04f502"
+  },
+  "name": "Rainbocorns Store"
+},
+{
+  "_id": {
+    "$oid": "66b04b3ea29ec8305b04f503"
+  },
+  "name": "NATIONAL GEOGRAPHIC Store"
+}]

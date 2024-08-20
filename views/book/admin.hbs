@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Toy</title>
+<style>
+   
+   /* Phần tổng quát */
+img.book-cover {
+    width: 160px; /* Thiết lập kích thước cố định */
+    height: 200px;
+    border: 1px solid #e50a0a; /* Thêm đường viền */
+    border-radius: 4px; /* Làm tròn góc */
+    object-fit: cover; /* Đảm bảo hình ảnh phù hợp với khung mà không bị méo */
+}
+
+/* Phóng to hình ảnh khi rê chuột */
+img.book-cover:hover {
+    transform: scale(1.3); /* Phóng to hình ảnh */
+    transition: transform 0.01s ease-in-out; /* Thêm hiệu ứng chuyển đổi mượt mà */
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: url('https://khoinguonsangtao.vn/wp-content/uploads/2022/10/hinh-anh-tuoi-tho-1.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.table {
+    background: rgba(159, 153, 154, 0.5); /* Điều chỉnh giá trị alpha để tạo độ mờ */
+    margin: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    border-collapse: collapse; /* Xóa khoảng cách giữa các ô */
+    width: 100%; /* Thiết lập chiều rộng của bảng */
+}
+
+/* Đường kẻ cho các ô */
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #333; /* Thêm đường viền cho các ô */
+}
+
+.h1 {
+    font-size: 24px;
+    font-weight: bold; /* Làm chữ đậm hơn */
+    color: #007bff;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-primary { background-color: #007bff; }
+.btn-secondary { background-color: #6c757d; }
+.btn-success { background-color: #28a745; }
+.btn-info { background-color: #17a2b8; }
+.btn-warning { background-color: #ffc107; }
+.btn-danger { background-color: #dc3545; }
+
+.form-control {
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    width: 70%;
+    box-sizing: border-box;
+    float: left;
+}
+
+.search-btn {
+    background-color: #dc3545;
+    width: 20%;
+    float: left;
+    margin-left: 8px;
+}
+
+</style>
+</head>
+<body>
+    <table class="table">
+       <thead>
+          <tr>
+             <th colspan="3" class="h1">PRODUCT TOY</th>
+             <th><a href="/" class="btn btn-primary">Logout</a></th>
+          </tr>
+          <tr>
+             <th colspan="2">
+                <form action="/book/search" method="post">
+                   <input class="form-control" type="search" name="name" placeholder="Search by name" required>
+                   <button type="submit" class="btn search-btn">Search</button>
+                </form>
+             </th>
+             <th colspan="2">
+                <a href="/book/add" class="btn btn-primary">Add</a>
+                <a href="/book/sort/asc" class="btn btn-secondary">Price ASC</a>
+                <a href="/book/sort/desc" class="btn btn-success">Price DESC</a>
+             </th>
+          </tr>
+          <tr>
+             <th>Toy Name</th>
+             <th>Toy Price</th>
+             <th>Toy Cover</th>
+             <th>Menu</th>
+          </tr>
+       </thead>
+       <tbody>
+          {{#each books}}
+          <tr>
+             <td>{{ name }}</td>
+             <td>${{ price }}</td>
+             <td><a href="/book/detailadmin/{{ _id }}"><img src="{{ cover }}" alt="Toy cover" class="book-cover"></a></td>
+
+             <td>
+                <a class="btn btn-warning" href="/book/edit/{{ _id}}">Edit</a>
+                <a class="btn btn-danger" href="/book/delete/{{ _id}}" onclick="return confirm('Are you sure to delete this book ?')">Delete</a>
+             </td>
+          </tr>
+          {{/each}}
+       </tbody>
+    </table>
+</body>
+</html>

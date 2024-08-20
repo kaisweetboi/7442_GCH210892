@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://mega.com.vn/media/news/0106_hinh-nen-4k-may-tinh32.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: black; /* Đảm bảo màu chữ là đen */
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            margin-top: 20px;
+            border-radius: 15px;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5rem; /* Kích thước chữ cho tiêu đề */
+            color: black;
+        }
+        .btn-home {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/book/customer" class="btn btn-primary btn-home">Back to toy list page</a>
+    <div class="container">
+        <h1>My Cart</h1>
+        {{#if cart}}
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Cover</th>
+                            <th>Product Name</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each cart}}
+                            <tr>
+                                <td><img src="{{this.cover}}" alt="cover" style="width:100px;"></td>
+                                <td>{{this.name}}</td>
+                                <td>{{this.qty}}</td>
+                                <td>${{this.price}}</td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-center">
+                <form action="/book/order" method="post">
+                    <button type="submit" class="btn btn-primary">Place Order</button>
+                </form>
+            </div>
+        {{else}}
+            <p class="text-center">Your cart is empty.</p>
+        {{/if}}
+        {{#if message}}
+            <p class="text-center">{{message}}</p>
+        {{/if}}
+    </div>
+</body>
+</html>

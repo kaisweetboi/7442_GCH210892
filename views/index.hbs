@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Toy Management System</title>
+   <style>
+      body, html {
+         height: 100%; /* Đảm bảo toàn bộ trang có chiều cao đầy đủ */
+         margin: 0; /* Xóa margin mặc định */
+         display: flex;
+         align-items: center; /* Căn giữa các mục theo chiều dọc */
+         justify-content: center; /* Căn giữa các mục theo chiều ngang */
+         background-image: url('https://img4.thuthuatphanmem.vn/uploads/2019/12/09/hinh-nen-bau-troi-dem-mau-tim_040930338.jpg');
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-position: center;
+      }
+      .main {
+         background: rgba(255, 255, 255, 0.8);
+         border-radius: 10px;
+         padding: 20px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+         width: 100%;
+         max-width: 450px; /* Tăng kích thước */
+      }
+      .text-danger {
+         color: #dc3545;
+         text-align: center; /* Căn giữa chữ "Toy Management System" */
+         font-size: 24px; /* Tăng kích thước chữ */
+         white-space: nowrap; /* Ngăn chữ gãy xuống hàng */
+      }
+      label {
+         font-weight: bold;
+         display: block;
+         margin-top: 10px;
+      }
+      .form-control {
+         display: block;
+         width: 100%;
+         padding: 0.375rem 0.75rem;
+         font-size: 1rem;
+         line-height: 1.5;
+         color: #495057;
+         background-color: #fff;
+         background-clip: padding-box;
+         border: 1px solid #ced4da;
+         border-radius: 0.25rem;
+         transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+         margin-top: 5px;
+      }
+      .wrap {
+         text-align: center;
+         margin-top: 20px;
+      }
+      .wrap button {
+         background-color: #007bff;
+         border: none;
+         color: white;
+         padding: 10px 20px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 16px;
+         margin: 4px 2px;
+         cursor: pointer;
+         border-radius: 5px;
+      }
+   </style>
+</head>
+<body>
+   <div class="main">
+      <h1 class="text text-danger">Toy Management System</h1>
+      <form action="/login" method="post">
+         <label for="first">Username:</label>
+         <input class="form-control" type="text" id="first" name="username" placeholder="Enter your Username" required>
+         <label for="password">Password:</label>
+         <input class="form-control" type="password" id="password" name="password" placeholder="Enter your Password" required>
+         <div class="wrap mt-3">
+            <button type="submit">Login</button>
+         </div>
+      </form>
+   </div>
+</body>
+</html>

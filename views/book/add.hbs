@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Add New Toy</title>
+   <style>
+      body {
+         background-image: url('https://th.bing.com/th/id/R.bdcbf15879a3ec89a4bb5c679b8bc801?rik=fcTvYPFp7NbxLg&pid=ImgRaw&r=0');
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-position: center;
+         color: #333;
+      }
+      .container {
+         background-color: #f8f9fa; /* Màu nền nhạt cho form */
+         border: 1px solid #ced4da; /* Viền nhẹ để tạo sự phân biệt */
+         padding: 20px;
+         border-radius: 10px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         margin-top: 50px;
+      }
+      h1.alert {
+         background-color: #ffc107; /* Màu vàng ấm cho tiêu đề */
+         color: #212529;
+      }
+      label {
+         color: #dc3545; /* Màu đỏ cho nhãn */
+      }
+      .form-control {
+         margin-bottom: 15px;
+         background-color: #ffffff; /* Nền trắng cho input */
+         border: 1px solid #ced4da; /* Viền nhẹ cho input */
+         color: #495057; /* Màu chữ xám đậm */
+      }
+      .btn-success {
+         background-color: #28a745; /* Màu xanh lá cho nút submit */
+         border-color: #28a745;
+      }
+      .btn-success:hover {
+         background-color: #218838; /* Màu xanh lá đậm hơn khi hover */
+         border-color: #1e7e34;
+      }
+   </style>
+</head>
+<body>
+   <div class="container text-center card col-md-6">
+      <form action="/book/add" method="post">
+         <h1 class="alert alert-warning text-uppercase">Add new toy</h1>
+         <div class="form-group mt-3">
+            <label class="fw-bold">Toy Name</label>
+            <input class="form-control" type="text" placeholder="Enter toy name" name="name" required>
+         </div>
+         <div class="form-group mt-3">
+            <label class="fw-bold">Toy Genre</label>
+            <select class="form-control" name="genre">
+               <option value="Car Toys">Car Toys</option>
+               <option value="Smart toys for kids">Smart toys for kids</option>
+               <option value="Dolls">Dolls</option>
+               <option value="Puzzle toys">Puzzle toys</option>
+            </select>
+         </div>
+         <div class="form-group mt-3">
+            <label class="fw-bold">Toy Publisher</label>
+            <select class="form-control" name="publisher">
+               {{#each publishers }}
+                  <option value="{{_id}}">{{ name }}</option>
+               {{/each}}
+            </select>
+         </div>
+         <div class="form-group mt-3">
+            <label class="fw-bold">Toy Price</label>
+            <input class="form-control" type="number" name="price" placeholder="Enter toy price">
+         </div>
+         <div class="form-group mt-3">
+            <label class="fw-bold">Toy Cover</label>
+            <input class="form-control" type="url" name="cover" placeholder="Enter toy cover url" required>
+         </div>
+         <div class="form-group mt-3 mb-3">
+            <input class="btn btn-success" type="submit" value="Add">
+         </div>
+      </form>
+   </div>
+</body>
+</html>

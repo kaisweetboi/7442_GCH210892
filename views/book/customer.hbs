@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Customer Toy List</title>
+   <style>
+      h1 {
+         font-size: 4rem;
+         font-weight: 700;
+         color: #f73e10;
+         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      body {
+         background-image: url('https://c.pxhere.com/images/c5/b1/1b85c73dc1cc6632b63afc7de1d8-1615918.jpg!d');
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-position: center;
+         color: #333;
+         position: relative;
+      }
+      .button-container {
+         position: absolute;
+         top: 20px;
+         right: 20px;
+         z-index: 1000;
+      }
+      .text-center {
+         padding: 20px;
+         border-radius: 10px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+         margin: 20px;
+      }
+      .card {
+         border: 1px solid #ddd;
+         border-radius: 8px;
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         overflow: hidden;
+      }
+      .card:hover {
+         transform: translateY(-10px);
+         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+         border-color: #007bff;
+      }
+      .card-img-top {
+         transition: transform 0.19s ease;
+      }
+      .card:hover .card-img-top {
+         transform: scale(1.05);
+      }
+      .card-name {
+         font-size: 1.1rem;
+         font-weight: bold;
+         margin-top: 10px;
+      }
+      .card-body {
+         padding: 10px;
+      }
+   </style>
+</head>
+<body>
+   <div class="button-container">
+      <a href="/" class="btn btn-primary">Logout</a>
+      <a href="/book/mycart" class="btn btn-primary">View Cart ({{cartCount}} items)</a>
+   </div>
+   <div class="text-center">
+      <h1>TOY LIST</h1>
+      <div class="row">
+         {{#each books }}
+         <div class="col-md-3 mt-3 mb-3">
+            <div class="card h-100 shadow-sm">
+               <a href="/book/detail/{{_id}}" class="stretched-link">
+                  <img class="card-img-top" src="{{ cover }}" alt="Toy cover" style="height: 250px; object-fit: contain;">
+               </a>
+               <div class="card-body">
+                  <h2 class="card-name text-primary">{{ name }}</h2>
+               </div>
+            </div>
+         </div>
+         {{/each}}
+      </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "66c46af0505b567bbf299962"
+  },
+  "name": "Mattel Disney Princess Toys, Doll Closet Playset with 2 Fashions, 25 Accessories, Vanity, Dressing Room, Runway & Storage, Opens to 2 Feet, Movie-Inspired",
+  "genre": "Dolls",
+  "price": 39,
+  "cover": "https://m.media-amazon.com/images/I/81BUpvn5qoL._AC_SX679_.jpg",
+  "publisher": {
+    "$oid": "66b04b3ea29ec8305b04f4ff"
+  }
+},
+{
+  "_id": {
+    "$oid": "66c46b1f505b567bbf299968"
+  },
+  "name": "Mattel Disney Princess Toys, Small Doll Party Set with 6 Posable Princess Dolls in Sparkling Clothing & 13 Tea Time Accessories",
+  "genre": "Dolls",
+  "price": 17,
+  "cover": "https://m.media-amazon.com/images/I/81oXiFvyB8L._AC_SX679_.jpg",
+  "publisher": {
+    "$oid": "66b04b3ea29ec8305b04f4ff"
+  }
+},
+{
+  "_id": {
+    "$oid": "66c46c39505b567bbf299971"
+  },
+  "name": "Hot Wheels Toy Trucks & Cars, 50-Pack, Set of 50 1:64 Scale Individually Packaged Vehicles, Instant Collection (Styles May Vary) (Amazon Exclusive)",
+  "genre": "Car Toys",
+  "price": 62,
+  "cover": "https://m.media-amazon.com/images/I/71w-07xvdKL._AC_SX679_.jpg",
+  "publisher": {
+    "$oid": "66b04b3ea29ec8305b04f500"
+  }
+},
+{
+  "_id": {
+    "$oid": "66c46c6b505b567bbf299975"
+  },
+  "name": "Hot Wheels City Toy Car Track Set Ultimate Garage with 2 Die-Cast Toy Cars & Car-Eating Dragon, Stores 50+ Vehicles, 4 Levels",
+  "genre": "Car Toys",
+  "price": 107,
+  "cover": "https://m.media-amazon.com/images/I/91qb7sOT5VL._AC_SX679_.jpg",
+  "publisher": {
+    "$oid": "66b04b3ea29ec8305b04f500"
+  }
+},
+{
+  "_id": {
+    "$oid": "66c46ca6505b567bbf299979"
+  },
+  "name": "LEGO Creator 3 in 1 Mighty Dinosaur Toy, Transforms from T. rex to Triceratops to Pterodactyl Dinosaur Figures, Great Gift for 7-12 Year Old Boys & Girls, 31058",
+  "genre": "Puzzle toys",
+  "price": 11,
+  "cover": "https://m.media-amazon.com/images/I/8153mG+qVgL._AC_SX679_.jpg",
+  "publisher": {
+    "$oid": "66b04b3ea29ec8305b04f501"
+  }
+},
+{
+  "_id": {
+    "$oid": "66c46cc9505b567bbf29997d"
+  },
+  "name": "LEGO Ideas Disney Hocus Pocus: The Sanderson Sisters' Cottage Collectible Building Set, Unique Gift Idea for Adults and Fans of Disney Movie Hocus Pocus, Includes Sanderson Sister Minifigures, 21341",
+  "genre": "Puzzle toys",
+  "price": 229,
+  "cover": "https://m.media-amazon.com/images/I/81DNcps5ftL._AC_SX679_.jpg",
+  "publisher": {
+    "$oid": "66b04b3ea29ec8305b04f501"
+  }
+},
+{
+  "_id": {
+    "$oid": "66c46d02505b567bbf299981"
+  },
+  "name": "Rainbocorns Fairycorn Princess Surprise (Unicorn) by ZURU 11\" Collectible Plush Stuffed Animal, Surprise Egg, Wearable Fairy Wings, Magical Fairy Princess, Ages 3+ for Girls, Children",
+  "genre": "Dolls",
+  "price": 25,
+  "cover": "https://m.media-amazon.com/images/I/91ot88+2cSL._AC_SX679_.jpg",
+  "publisher": {
+    "$oid": "66b04b3ea29ec8305b04f502"
+  }
+},
+{
+  "_id": {
+    "$oid": "66c46d29505b567bbf299985"
+  },
+  "name": "Rainbocorns Mermaidcorn (Puppy) by ZURU, Collectible Plush, Mermaid Surprises, Cuddle Plush Stuffed Animal, Surprise Egg, Stickers, Magic Sands & Bubble Mixture, for Girls 3+ Up",
+  "genre": "Dolls",
+  "price": 24,
+  "cover": "https://m.media-amazon.com/images/I/91BRbw7BerL._AC_SX679_.jpg",
+  "publisher": {
+    "$oid": "66b04b3ea29ec8305b04f502"
+  }
+},
+{
+  "_id": {
+    "$oid": "66c46d58505b567bbf299989"
+  },
+  "name": "Mega Fossil Dig Kit - Excavate 15 Genuine Prehistoric Fossils, Kids Fossil Kit, Educational Toys, Great Science Kit Gift for Girls and Boys (Amazon Exclusive)",
+  "genre": "Smart toys for kids",
+  "price": 20,
+  "cover": "https://m.media-amazon.com/images/I/913h1HCX62L._AC_SX679_.jpg",
+  "publisher": {
+    "$oid": "66b04b3ea29ec8305b04f503"
+  }
+},
+{
+  "_id": {
+    "$oid": "66c46d7f505b567bbf29998d"
+  },
+  "name": "Geology Bundle – Including Rock Collection Box for Kids, Crystal Growing Kit, and Gemstone Dig Kit, Real Gemstones and Crystals, Science Kit for Boys and Girls (Amazon Exclusive)",
+  "genre": "Smart toys for kids",
+  "price": 51,
+  "cover": "https://m.media-amazon.com/images/I/A1HPyIdeouL._AC_SX679_.jpg",
+  "publisher": {
+    "$oid": "66b04b3ea29ec8305b04f503"
+  }
+}]

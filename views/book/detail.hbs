@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Toy Detail</title>
+   <style>
+      body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         background-image: url('https://c.wallhere.com/photos/fd/27/landscape_Greece_Meteora_monastery-225200.jpg!d');
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         color: white;
+      }
+
+      .container {
+         display: flex;
+         justify-content: space-around;
+         align-items: center;
+         height: 100vh;
+         background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+      }
+
+      .col {
+         flex: 1;
+         margin: 20px;
+         padding: 20px;
+      }
+
+      img {
+         border-radius: 10px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+
+      h1 {
+         font-size: 2.5rem;
+         margin-bottom: 20px;
+      }
+
+      h3 {
+         font-size: 1.5rem;
+         margin-bottom: 15px;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="container">
+      <div class="col">
+         <img src="{{ book.cover }}" width="400" height="450" alt="Toy Cover Image">
+      </div>
+      <div class="col">
+         <h1 class="text text-danger">Toy Detail</h1>
+         <h3>Genre: {{ book.genre }}</h3>
+         <h3>Name: {{ book.name }}</h3>
+         <h3>Price: ${{ book.price }}</h3>
+         <h3>Publisher: {{ book.publisher.name }}</h3>
+          <a href="/book/add-to-cart/{{book._id}}" class="btn btn-primary">Add to Cart</a>
+         <a href="/book/customer" class="btn btn-primary">Back to home</a>
+      </div>
+   </div>
+</body>
+
+</html>
